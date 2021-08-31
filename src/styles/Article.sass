@@ -1,0 +1,74 @@
+.article:first-of-type
+    flex: 0 0 66%
+    max-width: 66%
+    width: 100%
+    position: relative
+    .article-bg
+        height: 350px
+
+.article
+    flex: 0 0 33%
+    max-width: 33%
+    width: 100%
+    padding: 15px
+    .article-bg
+        width: 100%
+        background-position: center
+        background-repeat: no-repeat
+        position: relative
+        height: 220px
+        .score
+            position: absolute
+            right: 0
+            display: inline-block
+            font-size: 18px
+            margin: 10px
+            padding: 2px 5px
+            border-radius: 5px
+            background-color: $text
+            color: $textBackground
+    h2
+        margin: 10px 0
+        color: $text
+        font-size: 32px
+        line-height: 1.2
+    .url
+        color: $text
+        font-size: 12px
+        margin: 0
+        word-break: break-all
+        display: block
+        line-height: 1.1
+    .author
+        font-size: 16px
+        margin: 4px 0
+        color: $text
+        display: block
+        vertical-align: text-top
+        svg
+            margin: 0px 5px 2px 0px
+        svg:nth-of-type(2)
+            margin-right: 10px
+
+@media(min-width: $large)
+    .article:first-of-type
+        h2
+            color: $text
+            background-color: $textBackground
+            font-size: 34px
+            border-radius: 15px
+            padding: 8px 15px
+            margin: 30px
+            position: absolute
+            top: 40%
+            left: 0
+
+@media(max-width: $small)
+    .article, .article:first-of-type
+        flex: 0 0 100%
+        max-width: 100%
+        width: auto
+        .article-bg
+            height: 240px
+        h2
+            font-size: 24px
